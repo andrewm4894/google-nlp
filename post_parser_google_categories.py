@@ -63,7 +63,6 @@ LIMIT
 
 # get data
 df = pd.read_gbq(qry,project_id,private_key=private_key)
-#print(df.head)
 
 ##########################################
 ## DO NLP
@@ -100,10 +99,6 @@ for index, row in df.iterrows():
     
     # stream results for each category into bq
     for category in categories:
-    
-        #print('-' * 15)
-        #print(category.name)
-        #print('-' * 15)
         
         try:
             out_df = out_df.append({'lob': lob,
@@ -116,8 +111,7 @@ for index, row in df.iterrows():
                                     }, ignore_index=True)                    
         except:
             pass
-    
-    #print(out_df.info())
+
     
     # if we have data then stream it in
     if out_df.shape[0] > 0:
