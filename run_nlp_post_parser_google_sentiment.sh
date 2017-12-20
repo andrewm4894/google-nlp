@@ -2,6 +2,8 @@
 
 echo "JOB_BEGIN_AT__"$(date "+%Y.%m.%d-%H.%M.%S")
 
+loblist=(lobA lobB lobC)
+
 for lob in "${loblist[@]}"
 do
 

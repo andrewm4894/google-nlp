@@ -2,7 +2,7 @@
 
 echo "JOB_BEGIN_AT__"$(date "+%Y.%m.%d-%H.%M.%S")
 
-loblist=(bgr deadline footwearnews goldderby hollywoodlife indiewire robbreport spy tvline variety wwd)
+loblist=(lobA lobB lobC)
 
 for lob in "${loblist[@]}"
 do
